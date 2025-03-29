@@ -38,19 +38,28 @@ body{
     border: 0.3em solid #ffff;
     border-radius: 0.5em ;
     /* transition: 0.5s ease; */
-    transform: rotate(0deg);
+    transform: translateX(0);
     transition: transform 0.5s;
 }
 .grid img:hover{
    transform: scale(1.8);
-   animation: spin  2s linear infinite;
+   animation: carousel  2s linear infinite;
 }
-@keyframes spin{
+@keyframes carousel {
    0%{
-    transform: rotate(0deg) translate3d(0, 0 , 0);
+    transform: translateX(0);
+   }
+   25%{
+    transform: translateX(-100%);
+   }
+   50%{
+    transform: translateX(-200%);
+   }
+   75%{
+    transform: translateX(-300%);
    }
    100%{
-    transform: rotate(360deg) translate3d(0, 0 , 0);
+    transform: translateX(0);
    }
 }
 
